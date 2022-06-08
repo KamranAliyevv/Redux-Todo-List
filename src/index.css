@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a,button,input{
+    border: 0;
+    outline: 0;
+}
+a{
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* App */
+.todo{
+    background:  linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    min-height: 100vh;
+    padding: 50px 0;
+}
+.todo-inner{
+    width:400px;
+    margin: 0 auto;
+}
+.todo-inner > h3{
+    font-size: 25px;
+    text-align: center;
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+/* Form */
+
+#todoForm{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.form-item{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.form-item input{
+    width: 100%;
+}
+.todo_button{
+    color:green;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+.select{
+    width: 25%;
+    height: 28px;
+}
+
+/* TodoList */
+
+.todoList{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.todoItem{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+.todoItem:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.todoItem h3{
+    font-size: 17px;
+    color: purple;
+    font-weight: 400;
+}
+.todoItem button{
+    width: 25px;
+    height: 25px;
+    color:#fff;
+    font-size: 13px;
+    border-radius: 1px;
+}
+.edit{
+    background-color: green;
+    margin-right: 5px;
+}
+.delete{
+    background-color: red;
+}
+.active{
+    background-color: gray;
+    width: 95%;
+    opacity: 0.8;
+    margin: auto;
+}
+.active h3{
+    text-decoration: line-through;
+}
+
