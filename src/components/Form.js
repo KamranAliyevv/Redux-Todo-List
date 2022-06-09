@@ -13,22 +13,22 @@ const Form = () => {
     dispatch({
       type:"Submit",
       payload:{
-        id:new Date(),
-        name:inputData.value,
-        checked:false
+        "id":new Date(),
+        "name":inputData.value,
+        "checked":false
       }
     })
     :
     dispatch({
       type:"Editing",
       payload:{
-        id:inputData.isEdited,
-        name:inputData.value,
-        checked:inputData.checked
+        "id":inputData.isEdited,
+        "name":inputData.value,
+        "checked":inputData.checked
       }
     })
     dispatch({
-      type:"Empty"
+      "type":"Empty"
     })
   
    } else{console.log("error")}
