@@ -1,10 +1,10 @@
-import { saveLocal, deleteItem,clickItem,addEditing } from "../action/DataAction";
+import { addItem, deleteItem,clickItem,addEditing } from "../action/DataAction";
 const initalValue = JSON.parse(localStorage.getItem("todo")) || [];
 
 export const dataReducer = (state = initalValue, action) => {
   switch (action.type) {
     case "Submit":
-      return saveLocal(action.payload, state);
+      return addItem(action.payload, state);
 
     case "Delete":
       return deleteItem(action.payload, state);

@@ -1,4 +1,4 @@
-export const saveLocal=((value,data)=>{
+export const addItem=((value,data)=>{
     const copyArray=[...data];
     copyArray.push(value);
     localStorage.setItem("todo",JSON.stringify(copyArray));
@@ -7,12 +7,7 @@ export const saveLocal=((value,data)=>{
 
 export const deleteItem=(id,data)=>{
     const copyArray=[...data];
-    const newArray=copyArray.filter(item=>{
-        if(item.id!==id){
-            console.log(1)
-            return item
-        }
-    })
+    const newArray=copyArray.filter(item=>item.id!==id);
     localStorage.setItem("todo",JSON.stringify(newArray));
     return newArray;
 }
@@ -23,6 +18,7 @@ export const clickItem=(id,data)=>{
         if(item.id===id){
             item.checked=!item.checked
         }
+        return item;
     })
     localStorage.setItem("todo",JSON.stringify(copyArray));
     return copyArray;
